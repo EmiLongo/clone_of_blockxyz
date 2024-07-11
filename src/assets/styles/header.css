@@ -1,0 +1,99 @@
+header{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin: 2.5em;
+    
+    a {
+        color: inherit;
+        text-decoration: underline;
+        text-decoration-thickness: 1px;
+        text-decoration-color: currentColor;
+        text-underline-offset: 8px;
+        transition: all 0.3s ease-out;
+    }
+    li{
+        font-size: 1.2em;
+        font-weight: 700;
+    }
+    img{
+        transition: all 0.3s ease-out;
+    }
+    nav img:hover{
+        filter: invert(1);
+    }
+    a:hover{
+        color: #fafafa;
+    }
+    h1{
+        position: absolute;
+        top: -10em;
+    }
+    .player{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 1em;
+        border: 1px solid black;
+        width: 100%;
+        max-width: 290px;
+        height: 56px;
+        border-radius: 50px; 
+        
+        #player-play{
+            position: relative;
+            overflow: hidden;
+            iframe{
+                position: absolute;
+                bottom: 0;
+                right: 0;
+                transform: rotate(180deg);
+                opacity: 0;
+            }
+        }
+        img{
+            margin: 1em;
+            cursor: pointer;
+        }
+        > div:first-child{
+            display: flex;
+            div{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+            }
+            img{
+                margin-left: 1.3em;
+            }
+            h3{
+                font-size: 0.7em;
+            }
+            h4{
+                font-size: 0.7em;
+                font-weight: 400;
+            }
+        }
+        > div:last-child{
+            border-left: 1px black solid;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            img{
+                margin-right: 1.5em;
+            }
+        }
+    }
+}
+@media (max-width: 767.99px) {
+    header{
+        margin: 1.5em 0;
+        gap: 3em;
+        li{
+            font-size: 0.8rem;
+        }
+    }
+    .player{
+        width: 100%;
+    }
+}

@@ -1,0 +1,42 @@
+video cubo girando
+<source src="https://cdn.block.xyz/logo/hevc/block_400.mov" type="video/quicktime; codecs=&quot;hvc1&quot;">
+
+reproductor de musica TIDAL
+<div className="playbackControls svelte-7nazxe">
+    <button
+      type="button"
+      className="left btn svelte-7nazxe"
+      aria-label="Play Block Vibes Curated by JAY-Z"
+    >
+      <div className="iconWrapper svelte-7nazxe">
+        <div className="icon svelte-7nazxe" style="">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24">
+            <path d="M8 5v14l11-7z"></path>
+          </svg>
+        </div>
+      </div>{" "}
+      <div className="trackInfo svelte-7nazxe">
+        <div className="title svelte-7nazxe">Block Vibes</div>{" "}
+        <div className="artist svelte-7nazxe">Curated by JAY-Z</div>
+      </div>
+    </button>{" "}
+    <a
+      className="right btn svelte-7nazxe"
+      href="https://tidal.com/browse/playlist/3d95c4f6-dad5-4d7f-a469-8bde01b7771d"
+      rel="noopener noreferrer"
+      target="_blank"
+      aria-label="Open Block Vibes Curated by JAY-Z in TIDAL"
+    >
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24">
+        <path d="M4 4 0 8l4 4 4-4 4 4-4 4 4 4 4-4-4-4 4-4 4 4 4-4-4-4-4 4-4-4-4 4z"></path>
+      </svg>
+    </a>
+  </div>
+
+
+<link rel="icon" href="https://cdn.block.xyz/_svelte/bc112d5ab01dab7b8b5c8cbaf6cda1d96a1700d6/favicon/064p.png">
+
+
+
+
+  
