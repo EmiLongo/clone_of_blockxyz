@@ -10,6 +10,7 @@ export const Modal = ({setOpenModal , isAnimating , setIsAnimating , isGrayscale
   const handleColor = () => {
     setIsCheck1(!isCheck1)
     setIsGrayscale(!isGrayscale)
+    document.body.style.filter = isGrayscale ? 'none' : 'grayscale(100%)';
   }
 
   const handleAnimation = () => {

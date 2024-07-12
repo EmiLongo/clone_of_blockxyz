@@ -1,16 +1,13 @@
 import { Cloud, Clouds, Environment , Float, MeshWobbleMaterial, OrbitControls} from '@react-three/drei';
 import { Canvas } from '@react-three/fiber'
 import useIsMobile from '@hooks/useIsMobile';
-export const CanvasContainer = ({isAnimating, isGrayscale}) => {
+export const CanvasContainer = ({isAnimating}) => {
   const isMobile = useIsMobile()
   const a = <Environment>...</Environment>
   console.log(a)
   return (
     <main id="canvas-container"
-          style={{
-            WebkitFilter: isGrayscale ? 'grayscale(100%)' : 'none',
-            filter: isGrayscale ? 'grayscale(100%)' : 'none'
-          }}
+
     >
         <Canvas 
           className='canvas'

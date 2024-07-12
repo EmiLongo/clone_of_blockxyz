@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import {  useState } from 'react';
 import { Footer } from './Footer';
 import { Header } from './Header';
 import { Modal } from './Modal';
@@ -9,8 +9,9 @@ export const Layout = ({isAnimating , setIsAnimating , isGrayscale , setIsGraysc
   const [isLoading, setIsLoading] = useState(true);
 
   return (
+    <>
+    {isLoading && <Loader setIsLoading={setIsLoading} />}
     <div id='layout'>
-      {isLoading && <Loader setIsLoading={setIsLoading} />}
       <Header setOpenModal={setOpenModal} />
       <Footer />
       {openModal && 
@@ -22,5 +23,6 @@ export const Layout = ({isAnimating , setIsAnimating , isGrayscale , setIsGraysc
         />
       }
     </div>
+    </>
   )
 }
