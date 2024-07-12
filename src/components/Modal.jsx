@@ -3,10 +3,20 @@ import cross from '@imgs/cross.svg'
 import boxchecked from '@imgs/boxchecked.svg'
 import boxunchecked from '@imgs/boxunchecked.svg'
 import { useState } from 'react'
-export const Modal = ({setOpenModal}) => {
+export const Modal = ({setOpenModal , isAnimating , setIsAnimating , isGrayscale , setIsGrayscale}) => {
   const [isCheck1, setIsCheck1] = useState(false);
   const [isCheck2, setIsCheck2] = useState(false);
 
+  const handleColor = () => {
+    setIsCheck1(!isCheck1)
+    setIsGrayscale(!isGrayscale)
+  }
+
+  const handleAnimation = () => {
+    setIsCheck2(!isCheck2)
+    setIsAnimating(!isAnimating)
+  }
+  
   return (
     <div id="modal" className="modal">
         <div className="modal-bg" onClick={() => setOpenModal(false)}>
@@ -24,16 +34,16 @@ export const Modal = ({setOpenModal}) => {
           <div className="modal-options">
             <div>
               <p>Reduce color</p>
-              <img src={isCheck1 ? boxchecked : boxunchecked} alt="Choose for reduce color" 
-                    onClick={() => setIsCheck1(!isCheck1)}
+              <img src={isGrayscale ? boxchecked : boxunchecked} alt="Choose for reduce color" 
+                    onClick={handleColor}
                     width="24"
               />
             </div>
             <div className="line"></div>
             <div>
               <p>Reduce motion</p>
-              <img src={isCheck2 ? boxchecked : boxunchecked} alt="Choose for reduce motion" 
-                    onClick={() => setIsCheck2(!isCheck2)}
+              <img src={!isAnimating ? boxchecked : boxunchecked} alt="Choose for reduce motion" 
+                    onClick={handleAnimation}
                     width="24"
               />
             </div>

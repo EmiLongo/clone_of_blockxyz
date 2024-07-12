@@ -1,17 +1,17 @@
-// import { Environment , OrbitControls } from '@react-three/drei';
-// import { Canvas } from '@react-three/fiber'
 import { useEffect, useState } from 'react';
 import { Layout } from './Layout';
 import { CanvasContainer } from '../scenes/CanvasContainer';
 
-// import { MorphAnimMesh } from 'three/examples/jsm/Addons.js';
-
 function App() {
-  const [embedHtml, setEmbedHtml] = useState('');
+  const [isAnimating, setIsAnimating] = useState(true)
+  const [isGrayscale, setIsGrayscale] = useState(false)
+
+
+  const [embedHtml, setEmbedHtml] = useState('')
   console.log(embedHtml)
 
   useEffect(() => {
-    const oembedUrl = `https://embed.tidal.com/playlists/f8e89248-59b2-4f83-81ef-168d2bf2bf61`;
+    const oembedUrl = `https://embed.tidal.com/playlists/f8e89248-59b2-4f83-81ef-168d2bf2bf61`
 
     fetch(oembedUrl)
       .then(response => response.json())
@@ -25,25 +25,12 @@ function App() {
 
   return (
     <>
-      <Layout />
-      <CanvasContainer />
-      {/* <main id="canvas-container">
-        <Canvas 
-          className='canvas'
-          shadows
-          camera={{ position: [0, 0, 3], fov : 45 }}
-        >
-          <OrbitControls autoRotate autoRotateSpeed={4}/>
-
-          <Environment preset="sunset" />
-          <ambientLight />
-          <mesh>
-            <boxGeometry />
-            <meshStandardMaterial />
-
-          </mesh>
-        </Canvas>
-      </main> */}
+      <Layout isAnimating={isAnimating} 
+              setIsAnimating={setIsAnimating} 
+              isGrayscale={isGrayscale}
+              setIsGrayscale={setIsGrayscale}
+      />
+      <CanvasContainer isAnimating={isAnimating} isGrayscale={isGrayscale} />
     </>
   );
 }
