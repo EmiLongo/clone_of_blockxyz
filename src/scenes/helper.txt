@@ -1,3 +1,6 @@
+este es el efecto del cubo en block.xyz, no encuentro los parametros en la libreria de REACT
+https://threejs.org/examples/#webgl_morphtargets_sphere
+
 como sería el MorphTarget hecho con JS vainilla
 function render() {
     const delta = timer.getDelta();

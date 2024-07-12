@@ -56,18 +56,6 @@ ul{
   padding: 0;
   margin: 0
 }
-/* canvas {
-  z-index: -1;
-  position: absolute;
-  width: 100%;
-  height: 60%;
-  transform: rotate(0deg) scale(2) translateY(0%);
-  --gradient-color-1: #FF3C00; 
-  --gradient-color-2: #6ec3f4; 
-  --gradient-color-3: #FA5104;  
-  --gradient-color-4: #38DCCB;
-  --gradient-speed: 0.000006;
-} */
 
 @media (min-width: 1400px) {
   body{
@@ -80,3 +68,26 @@ ul{
   }
 }
 
+
+.background--custom {
+  background-color: #FFFFFF;
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  overflow: hidden;
+  z-index: -2;
+  top: 0;
+  left: 0;
+}
+canvas#canvas {
+  z-index: -1;
+  position: absolute;
+  width: 100dvh;
+  height: 100dvh;
+  transform: scale(3.5);
+  --gradient-color-1: #FF3C00; 
+  --gradient-color-2: #6ec3f4; 
+  --gradient-color-3: #FA5104;  
+  --gradient-color-4: #38DCCB;
+  --gradient-speed: 0.000006;
+}
