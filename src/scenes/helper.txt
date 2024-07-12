@@ -1,0 +1,13 @@
+como sería el MorphTarget hecho con JS vainilla
+function render() {
+    const delta = timer.getDelta();
+    if ( mesh !== undefined ) {
+        const step = delta * speed;
+        mesh.rotation.y += step;
+        mesh.morphTargetInfluences[ 1 ] = mesh.morphTargetInfluences[ 1 ] + step * sign;
+        if ( mesh.morphTargetInfluences[ 1 ] <= 0 || mesh.morphTargetInfluences[ 1 ] >= 1 ) {
+            sign *= - 1;
+        }
+    }
+    renderer.render( scene, camera );
+}

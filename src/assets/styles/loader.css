@@ -1,0 +1,15 @@
+.loader{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    inset: 0;
+    background-color: #fbfbfb;
+    z-index: 100;
+    transition: all 1s ease-out;
+    img{
+        transition: opacity 1.3s ease-out,
+                    filter 0.6s ease-out,
+                    backdrop-filter 0.6s ease-out;
+    }
+}

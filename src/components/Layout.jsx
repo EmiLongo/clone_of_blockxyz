@@ -1,12 +1,16 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { Footer } from './Footer';
 import { Header } from './Header';
 import { Modal } from './Modal';
 import '@styles/layout.css';
+import { Loader } from './Loader';
 export const Layout = ({isAnimating , setIsAnimating , isGrayscale , setIsGrayscale }) => {
   const [openModal, setOpenModal] = useState(false);
+  const [isLoading, setIsLoading] = useState(true);
+
   return (
     <div id='layout'>
+      {isLoading && <Loader setIsLoading={setIsLoading} />}
       <Header setOpenModal={setOpenModal} />
       <Footer />
       {openModal && 

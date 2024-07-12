@@ -45,6 +45,7 @@ body, #root {
   position: fixed !important;
   inset: 0 !important;
   z-index: -1 !important;
+  transition: all 1s ease-out;
 }
 
 ul{
